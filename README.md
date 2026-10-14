@@ -63,13 +63,11 @@ Replace the placeholders with the correct names before final submission.
 
 ## Presentation
 
-**Status:** Add the final presentation PDF to this repository.
+**Status:** Added the final presentation PDF to this repository.
 
-Suggested path: `presentation/RPKI-PathWatch-AIORI-Hackathon3.pdf`
+Link:
 
-Once uploaded, link it here:
-
-`[View the presentation](presentation/RPKI-PathWatch-AIORI-Hackathon3.pdf)`
+[`RPKI-PathWatch-AIORI-Hackathon3.pdf)`](https://github.com/Akshat1806/A3-PS032-TC538/blob/main/RPKI-PathWatch-AIORI-Hackathon3.pdf)
 
 The supplied reference template is available at [Proposed-structure-hackathon.pdf](Proposed-structure-hackathon.pdf).
 
@@ -85,13 +83,47 @@ Ensure the video is accessible to the evaluators.
 
 ```text
 A3-PS032-TC538/
+│
+├── .gitignore
 ├── README.md
 ├── Proposed-structure-hackathon.pdf
-├── presentation/
-├── docs/
-├── src/
-├── tests/
-└── requirements.txt
+├── RPKI-PathWatch-AIORI-Hackathon3.pdf
+├── app.py
+├── requirements.txt
+│
+├── data/
+│   ├── raw/
+│   │   ├── bgp_193.0.0.0_21_20241220_120000.json
+│   │   ├── bgp_193.0.0.0_21_20241221_120000.json
+│   │   ├── bgp_193.0.0.0_21_20241222_120000.json
+│   │   ├── bgp_updates_193.0.0.0_21_20241220_20241223.json
+│   │   ├── manifest_193.0.0.0_21_20241220_120000.json
+│   │   ├── manifest_193.0.0.0_21_20241221_120000.json
+│   │   ├── manifest_193.0.0.0_21_20241222_120000.json
+│   │   └── rpki_current_193.0.0.0_21_3333.json
+│   │
+│   └── processed/
+│       ├── bgp_193.0.0.0_21_20241220_120000_routes.json
+│       ├── bgp_193.0.0.0_21_20241220_120000_routes_analysis.json
+│       ├── bgp_193.0.0.0_21_20241221_120000_routes.json
+│       ├── bgp_193.0.0.0_21_20241221_120000_routes_analysis.json
+│       ├── bgp_193.0.0.0_21_20241222_120000_routes.json
+│       ├── bgp_193.0.0.0_21_20241222_120000_routes_analysis.json
+│       ├── bgp_updates_normalized.json
+│       ├── bgp_updates_summary.json
+│       ├── comparison_20241220T120000_to_20241221T120000.json
+│       ├── comparison_20241221T120000_to_20241222T120000.json
+│       └── route_event_analysis.json
+│
+└── src/
+    ├── README.md
+    ├── analyze.py
+    ├── analyze_updates.py
+    ├── compare.py
+    ├── fetch_updates.py
+    ├── ingest.py
+    ├── normalize.py
+    └── reconstruct_routes.py
 ```
 
 The folders and dependency file will be populated as development progresses. Document dataset retrieval instructions instead of committing large raw routing dumps. Never commit API keys or credentials.
@@ -107,6 +139,30 @@ For selected historical RPKI transitions, we intend to:
 - Document missing observations, timestamp limitations, and possible unrelated routing events.
 - Avoid inferring global unreachability from a single collector's missing route.
 - Distinguish temporal correlation from demonstrated causation.
+
+
+## MVP and Deliverables
+
+- [Source code](https://github.com/Akshat1806/A3-PS032-TC538/tree/main/src)
+- [Streamlit dashboard source](https://github.com/Akshat1806/A3-PS032-TC538/blob/main/app.py)
+- [Dependencies](https://github.com/Akshat1806/A3-PS032-TC538/blob/main/requirements.txt)
+- [Raw BGP data](https://github.com/Akshat1806/A3-PS032-TC538/tree/main/data/raw)
+- [Processed data and analysis results](https://github.com/Akshat1806/A3-PS032-TC538/tree/main/data/processed)
+
+### Run locally
+
+```bash
+pip install -r requirements.txt
+python -m streamlit run app.py
+```
+
+### Current limitations
+
+The MVP analyzes collected historical BGP updates and route snapshots.
+Historical RPKI validation-state correlation has not yet been implemented.
+The current results do not establish that RPKI state changes caused
+the observed BGP events.
+
 
 ## References and Resources
 
