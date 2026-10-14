@@ -4,176 +4,189 @@
 **Problem Statement:** PS-032 — Path and Reachability Analysis During RPKI State Changes  
 **Problem Area:** Internet Measurements  
 **Institution:** National Forensic Science University (NFSU), Guwahati Campus  
-**Status:** Proposed research prototype — implementation in progress
+**Project Status:** Working MVP — historical RPKI state correlation pending
 
 ## Overview
 
-RPKI-PathWatch is a proposed Internet measurement and analysis platform for investigating how Resource Public Key Infrastructure (RPKI) validation-state changes relate to observed Border Gateway Protocol (BGP) routing behaviour.
+RPKI-PathWatch is an Internet measurement prototype for analyzing Border Gateway Protocol (BGP) route observations, announcements, withdrawals, and AS-path changes in the context of Resource Public Key Infrastructure (RPKI) validation.
 
-The project aims to correlate transitions between the RPKI states **Valid, Invalid, and NotFound** with observed AS-path changes, route announcements, withdrawals, and prefix visibility across multiple routing collectors.
+The current MVP collects and analyzes historical BGP data from RIPE Stat. It provides route snapshot comparisons, BGP update summaries, preliminary route-event reconstruction, and a Streamlit dashboard for reviewing the results.
 
-An RPKI state change does not automatically imply that a prefix becomes unreachable across the Internet. Outcomes depend on network routing policies, alternative paths, BGP convergence, and measurement coverage. Our approach will distinguish observed correlations from proven causation.
+The longer-term objective is to correlate historical RPKI validation-state transitions with changes in BGP paths and prefix visibility across routing collectors.
 
-## Objectives
+**Important:** Historical RPKI validation-state correlation has not yet been implemented. The current analysis does not establish that an RPKI state transition caused any observed BGP event or reachability change.
 
-- Identify selected RPKI validation-state transitions.
-- Compare BGP observations before and after selected events.
-- Analyze AS-path changes, announcements, withdrawals, and prefix visibility.
-- Estimate routing stabilization or recovery intervals when the available data supports doing so.
-- Visualize event timelines and routing observations through an interactive dashboard.
-- Document uncertainty, data limitations, and alternative explanations.
+## Current MVP Features
 
-## Proposed Methodology
+- Retrieval of historical BGP route-state snapshots through RIPE Stat.
+- Retrieval and normalization of historical BGP update events.
+- Basic event classification into announcements and withdrawals.
+- AS-path statistics and route snapshot comparisons.
+- Preliminary reconstruction of route events and observed path changes.
+- Streamlit dashboard for displaying analysis results.
+- Raw data, processed data, and analysis outputs included for reproducibility.
 
-1. **Data collection:** Obtain routing observations from RIPE RIS and/or RouteViews and suitable RPKI validation-state data from documented sources.
-2. **Data normalization:** Process timestamps, prefixes, origin ASes, AS paths, announcements, and withdrawals.
-3. **Transition detection:** Identify relevant changes in RPKI validation states.
-4. **Event correlation:** Align RPKI transitions with BGP observations using defined before-and-after time windows.
-5. **Routing analysis:** Compare observed paths, route events, and prefix visibility across collectors.
-6. **Visualization and evaluation:** Display the findings, evaluate selected historical events, and document limitations.
+### Current Dataset
 
-## Proposed Technology Stack
+The collected BGP update dataset covers **20–23 December 2024**, for the prefix `193.0.0.0/21`.
 
-- **Language:** Python
-- **Data processing:** Pandas and suitable BGP/MRT parsing libraries
-- **Potential data sources:** RIPE RIS, RouteViews, NIST RPKI Monitor, and relevant RIPE NCC resources
-- **Dashboard:** Streamlit and Plotly
-- **Version control:** Git and GitHub
+| Metric | Observed result |
+|---|---:|
+| BGP update events returned by the query | 266 |
+| Announcements | 262 |
+| Withdrawals | 4 |
+| Distinct source IDs | 42 |
+| Events containing an AS path | 262 |
+| Observed path changes reported by the preliminary reconstruction | 112 |
+| Announcements after withdrawals reported by the preliminary reconstruction | 3 |
 
-These are proposed implementation choices; capabilities will be described as implemented only after development and testing.
+These counts describe the collected query results, not all global BGP activity. The path-reconstruction metrics are preliminary and require further validation before being treated as definitive findings.
 
-## Team and Responsibilities
+## Data Sources
 
-| Team member | Area of responsibility |
-|---|---|
-| Akshat | System architecture, data processing, event correlation, routing metrics, dashboard integration, and reproducibility. |
-| Krishn | Cybersecurity research, RPKI/BGP security, RFC review, test-scenario design, validation of observations, and documentation. |
-| Parthajit Borah | Research guidance, methodology review, technical feedback, and interpretation of findings. |
+- **RIPE Stat:** Historical BGP route-state and BGP update observations.
+- **Current RPKI validation lookup:** Stored separately from the historical BGP observations.
 
-Replace the placeholders with the correct names before final submission.
-
-## Expected Deliverables
-
-- Final presentation in PDF format.
-- Team introduction video explaining the problem, proposed solution, and member responsibilities.
-- Source code and setup instructions.
-- Architecture and methodology documentation.
-- Tests and evaluation of selected historical events.
-- Working demo link or reviewable final deliverables.
-
-## Presentation
-
-**Status:** Added the final presentation PDF to this repository.
-
-Link:
-
-[`RPKI-PathWatch-AIORI-Hackathon3.pdf)`](https://github.com/Akshat1806/A3-PS032-TC538/blob/main/RPKI-PathWatch-AIORI-Hackathon3.pdf)
-
-The supplied reference template is available at [Proposed-structure-hackathon.pdf](Proposed-structure-hackathon.pdf).
-
-## Team Introduction Video
-
-**Status:** Add the YouTube link after uploading the recorded introduction video.
-
-**Video:** [Add YouTube video URL here]
-
-Ensure the video is accessible to the evaluators.
+The current RPKI lookup is not a historical record of the validation state at the time of the collected BGP events. It must not be used as a substitute for historical RPKI state-transition data.
 
 ## Repository Structure
 
 ```text
 A3-PS032-TC538/
-│
 ├── .gitignore
 ├── README.md
 ├── Proposed-structure-hackathon.pdf
 ├── RPKI-PathWatch-AIORI-Hackathon3.pdf
 ├── app.py
 ├── requirements.txt
-│
 ├── data/
 │   ├── raw/
-│   │   ├── bgp_193.0.0.0_21_20241220_120000.json
-│   │   ├── bgp_193.0.0.0_21_20241221_120000.json
-│   │   ├── bgp_193.0.0.0_21_20241222_120000.json
-│   │   ├── bgp_updates_193.0.0.0_21_20241220_20241223.json
-│   │   ├── manifest_193.0.0.0_21_20241220_120000.json
-│   │   ├── manifest_193.0.0.0_21_20241221_120000.json
-│   │   ├── manifest_193.0.0.0_21_20241222_120000.json
-│   │   └── rpki_current_193.0.0.0_21_3333.json
-│   │
+│   │   ├── historical BGP route snapshots
+│   │   ├── historical BGP update events
+│   │   ├── collection manifests
+│   │   └── current RPKI lookup
 │   └── processed/
-│       ├── bgp_193.0.0.0_21_20241220_120000_routes.json
-│       ├── bgp_193.0.0.0_21_20241220_120000_routes_analysis.json
-│       ├── bgp_193.0.0.0_21_20241221_120000_routes.json
-│       ├── bgp_193.0.0.0_21_20241221_120000_routes_analysis.json
-│       ├── bgp_193.0.0.0_21_20241222_120000_routes.json
-│       ├── bgp_193.0.0.0_21_20241222_120000_routes_analysis.json
-│       ├── bgp_updates_normalized.json
-│       ├── bgp_updates_summary.json
-│       ├── comparison_20241220T120000_to_20241221T120000.json
-│       ├── comparison_20241221T120000_to_20241222T120000.json
-│       └── route_event_analysis.json
-│
+│       ├── normalized route snapshots
+│       ├── route analysis summaries
+│       ├── BGP update summaries
+│       ├── snapshot comparisons
+│       └── route event reconstruction
 └── src/
     ├── README.md
-    ├── analyze.py
-    ├── analyze_updates.py
-    ├── compare.py
-    ├── fetch_updates.py
     ├── ingest.py
     ├── normalize.py
+    ├── analyze.py
+    ├── fetch_updates.py
+    ├── analyze_updates.py
+    ├── compare.py
     └── reconstruct_routes.py
 ```
 
-The folders and dependency file will be populated as development progresses. Document dataset retrieval instructions instead of committing large raw routing dumps. Never commit API keys or credentials.
+## Run the MVP Locally
 
-## Evaluation Plan
+### Requirements
 
-For selected historical RPKI transitions, we intend to:
+- Python 3.10 or newer recommended
+- Git
+- Internet access for retrieving new data through the ingestion scripts
 
-- Compare BGP observations across defined time windows.
-- Examine path changes, announcements, withdrawals, and collector visibility.
-- Compare observations from multiple available collectors.
-- Assess stabilization or recovery where measurable.
-- Document missing observations, timestamp limitations, and possible unrelated routing events.
-- Avoid inferring global unreachability from a single collector's missing route.
-- Distinguish temporal correlation from demonstrated causation.
+### Installation
 
+Clone the repository and enter its directory:
 
-## MVP and Deliverables
+```bash
+git clone https://github.com/Akshat1806/A3-PS032-TC538.git
+cd A3-PS032-TC538
+```
 
-- [Source code](https://github.com/Akshat1806/A3-PS032-TC538/tree/main/src)
-- [Streamlit dashboard source](https://github.com/Akshat1806/A3-PS032-TC538/blob/main/app.py)
-- [Dependencies](https://github.com/Akshat1806/A3-PS032-TC538/blob/main/requirements.txt)
-- [Raw BGP data](https://github.com/Akshat1806/A3-PS032-TC538/tree/main/data/raw)
-- [Processed data and analysis results](https://github.com/Akshat1806/A3-PS032-TC538/tree/main/data/processed)
+Create and activate a virtual environment if desired, then install dependencies:
 
-### Run locally
+```bash
+python -m venv .venv
+```
+
+On Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Install the requirements:
 
 ```bash
 pip install -r requirements.txt
+```
+
+### Launch the Dashboard
+
+```bash
 python -m streamlit run app.py
 ```
 
-### Current limitations
+Streamlit will provide a local URL, normally `http://localhost:8501`.
 
-The MVP analyzes collected historical BGP updates and route snapshots.
-Historical RPKI validation-state correlation has not yet been implemented.
-The current results do not establish that RPKI state changes caused
-the observed BGP events.
+The dashboard reads the analysis files under `data/processed/`. Keep the existing repository data files in place when running the included demonstration.
 
+## Source Code and Deliverables
+
+- **[Repository home](https://github.com/Akshat1806/A3-PS032-TC538)**
+- **[Source scripts](https://github.com/Akshat1806/A3-PS032-TC538/tree/main/src)**
+- **[Streamlit dashboard source](https://github.com/Akshat1806/A3-PS032-TC538/blob/main/app.py)**
+- **[Dependencies](https://github.com/Akshat1806/A3-PS032-TC538/blob/main/requirements.txt)**
+- **[Raw collected data](https://github.com/Akshat1806/A3-PS032-TC538/tree/main/data/raw)**
+- **[Processed data and analysis results](https://github.com/Akshat1806/A3-PS032-TC538/tree/main/data/processed)**
+- **[Final presentation PDF](https://github.com/Akshat1806/A3-PS032-TC538/blob/main/RPKI-PathWatch-AIORI-Hackathon3.pdf)**
+- **[Official presentation structure PDF](https://github.com/Akshat1806/A3-PS032-TC538/blob/main/Proposed-structure-hackathon.pdf)**
+
+## Team and Responsibilities
+
+| Team member | Area of responsibility |
+|---|---|
+| Akshat | System architecture, data processing, event analysis, routing metrics, and dashboard integration |
+| Krishn | Cybersecurity research, RPKI/BGP security, RFC review, test scenarios, and validation |
+| Parthajit Borah | Research guidance, methodology review, technical feedback, and interpretation |
+
+## Known Limitations
+
+- Historical RPKI validation-state transitions have not yet been integrated into the analysis.
+- The current RPKI lookup does not establish historical validation states.
+- The current dataset covers a selected prefix and a limited time window.
+- RIPE Stat query results do not necessarily represent every BGP event observed globally.
+- Route-event reconstruction is preliminary and requires additional testing.
+- A missing route observation at a collector does not, by itself, prove global prefix unreachability.
+- Temporal correlation alone would not establish causation.
+
+## Planned Work
+
+The next development phase will focus on:
+
+1. Obtaining suitable historical RPKI validation-state observations or VRP snapshots.
+2. Detecting and timestamping RPKI validation-state transitions.
+3. Correlating transitions with BGP announcements, withdrawals, AS-path changes, and prefix visibility.
+4. Validating the event reconstruction logic and adding automated tests.
+5. Evaluating observations across multiple collectors where data is available.
+6. Improving dashboard visualizations and documenting reproducible evaluation scenarios.
+
+These are planned capabilities and should not be interpreted as features already implemented in the current MVP.
+
+## Team Introduction Video
+
+**Status:** Pending upload.
+
+**YouTube link:** To be added after the team introduction video is published.
+
+Ensure the video is accessible to the hackathon evaluators and replace this placeholder with the final URL.
 
 ## References and Resources
 
-- [IETF RFC Editor](https://www.rfc-editor.org/)
-- [RIPE RIS](https://ris.ripe.net/)
+- [RIPE Routing Information Service (RIS)](https://ris.ripe.net/)
+- [RIPE Stat](https://stat.ripe.net/)
 - [RouteViews](https://www.routeviews.org/)
 - [NIST RPKI Monitor](https://rpki-monitor.antd.nist.gov/)
+- [IETF RFC Editor](https://www.rfc-editor.org/)
 - [RIPE NCC](https://www.ripe.net/)
-
-Specific standards and research publications will be cited in the technical documentation after verification.
 
 ---
 
-Prepared for **AIORI Hackathon 3**, Team `A3-PS032-TC538`.
+Prepared for **AIORI Hackathon 3**  
+Team: `A3-PS032-TC538`
