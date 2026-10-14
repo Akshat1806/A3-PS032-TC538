@@ -1,0 +1,36 @@
+{
+  "comparison": {
+    "from_timestamp": "2024-12-20T12:00:00",
+    "to_timestamp": "2024-12-21T12:00:00"
+  },
+  "route_record_counts": {
+    "before": 385,
+    "after": 385
+  },
+  "observed_new_route_keys": 0,
+  "observed_missing_route_keys": 0,
+  "observed_changed_as_paths": 1,
+  "new_routes_sample": [],
+  "missing_routes_sample": [],
+  "changed_paths_sample": [
+    {
+      "prefix": "193.0.0.0/21",
+      "source_id": "22-86.104.125.81",
+      "old_path": [
+        31554,
+        47734,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        31554,
+        6204,
+        1257,
+        3333
+      ]
+    }
+  ],
+  "synthetic_data_used": false,
+  "interpretation_warning": "Snapshot differences are observed state differences, not a complete log of BGP announcements or withdrawals. Missing observations may reflect coverage or data gaps."
+}

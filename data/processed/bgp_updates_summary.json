@@ -1,0 +1,27 @@
+{
+  "data_source": "ripe_stat_bgp_updates",
+  "query_starttime": "2024-12-20T00:00:00",
+  "query_endtime": "2024-12-23T00:00:00",
+  "api_nr_updates": 266,
+  "events_parsed": 266,
+  "event_type_counts": {
+    "W": 4,
+    "A": 262
+  },
+  "unique_prefixes": [
+    "193.0.0.0/21"
+  ],
+  "unique_source_ids": 42,
+  "events_with_path": 262,
+  "path_length_distribution": {
+    "2": 55,
+    "3": 69,
+    "4": 134,
+    "5": 1,
+    "6": 3
+  },
+  "first_event_timestamp": "2024-12-20T00:00:30",
+  "last_event_timestamp": "2024-12-22T22:14:26",
+  "synthetic_data_used": false,
+  "note": "Counts describe events returned by this API query. They do not establish that all global BGP events were observed. Do not infer an RPKI state transition from BGP events alone."
+}

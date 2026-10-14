@@ -1,0 +1,27 @@
+{
+  "input_file": "bgp_193.0.0.0_21_20241221_120000_routes.json",
+  "timestamp": "2024-12-21T12:00:00",
+  "data_source": "ripe_stat_bgp_state",
+  "synthetic_data_used": false,
+  "route_record_count": 385,
+  "unique_prefix_count": 1,
+  "unique_source_id_count": 385,
+  "unique_as_path_count": 306,
+  "origin_as_counts": {
+    "3333": 385
+  },
+  "as_path_length_distribution": {
+    "1": 1,
+    "2": 109,
+    "3": 109,
+    "4": 134,
+    "5": 24,
+    "6": 6,
+    "7": 1,
+    "8": 1
+  },
+  "as_path_length_min": 1,
+  "as_path_length_max": 8,
+  "as_path_length_mean": 3.255,
+  "rpki_status": "not_analyzed_time_aligned_data_unavailable"
+}

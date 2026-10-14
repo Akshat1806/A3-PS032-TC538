@@ -1,0 +1,2012 @@
+{
+  "data_source": "ripe_stat_bgp_updates",
+  "input_event_count": 266,
+  "event_type_counts": {
+    "W": 4,
+    "A": 262
+  },
+  "source_prefix_pairs": 42,
+  "observed_withdrawal_count": 4,
+  "observed_path_change_count": 112,
+  "announcement_after_withdrawal_count": 3,
+  "announcement_after_withdrawal": [
+    {
+      "sequence_type": "announcement_after_withdrawal",
+      "prefix": "193.0.0.0/21",
+      "source_id": "03-193.239.117.32",
+      "withdrawal_timestamp": "2024-12-20T00:00:30",
+      "announcement_timestamp": "2024-12-20T00:01:27",
+      "announced_path": [
+        140984,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announcement_after_withdrawal",
+      "prefix": "193.0.0.0/21",
+      "source_id": "19-196.60.8.44",
+      "withdrawal_timestamp": "2024-12-20T00:07:31",
+      "announcement_timestamp": "2024-12-20T00:13:05",
+      "announced_path": [
+        327983,
+        37497,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announcement_after_withdrawal",
+      "prefix": "193.0.0.0/21",
+      "source_id": "03-193.239.117.32",
+      "withdrawal_timestamp": "2024-12-21T16:06:24",
+      "announcement_timestamp": "2024-12-21T16:08:01",
+      "announced_path": [
+        140984,
+        3333
+      ]
+    }
+  ],
+  "sequences": [
+    {
+      "sequence_type": "withdrawal_observed",
+      "timestamp": "2024-12-20T00:00:30",
+      "prefix": "193.0.0.0/21",
+      "source_id": "03-193.239.117.32",
+      "last_known_path": null,
+      "previous_event_timestamp": null,
+      "previous_event_type": null
+    },
+    {
+      "sequence_type": "withdrawal_observed",
+      "timestamp": "2024-12-20T00:07:31",
+      "prefix": "193.0.0.0/21",
+      "source_id": "19-196.60.8.44",
+      "last_known_path": null,
+      "previous_event_timestamp": null,
+      "previous_event_type": null
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-20T00:09:13",
+      "prefix": "193.0.0.0/21",
+      "source_id": "10-217.29.67.13",
+      "previous_path": [
+        57111,
+        174,
+        1257,
+        3333
+      ],
+      "new_path": [
+        57111,
+        41327,
+        6762,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-20T14:00:06",
+      "prefix": "193.0.0.0/21",
+      "source_id": "19-196.60.9.165",
+      "previous_path": [
+        917,
+        60068,
+        37468,
+        3333
+      ],
+      "new_path": [
+        917,
+        60068,
+        1257,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-20T14:08:43",
+      "prefix": "193.0.0.0/21",
+      "source_id": "00-12.0.1.63",
+      "previous_path": [
+        7018,
+        174,
+        1257,
+        3333
+      ],
+      "new_path": [
+        7018,
+        1299,
+        12859,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "withdrawal_observed",
+      "timestamp": "2024-12-20T23:00:41",
+      "prefix": "193.0.0.0/21",
+      "source_id": "21-37.49.232.1",
+      "last_known_path": [
+        6774,
+        3333
+      ],
+      "previous_event_timestamp": "2024-12-20T23:00:38",
+      "previous_event_type": "A"
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-20T23:00:41",
+      "prefix": "193.0.0.0/21",
+      "source_id": "21-37.49.232.11",
+      "previous_path": [
+        14907,
+        6774,
+        3333
+      ],
+      "new_path": [
+        14907,
+        5511,
+        1136,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-20T23:00:41",
+      "prefix": "193.0.0.0/21",
+      "source_id": "21-37.49.232.11",
+      "previous_path": [
+        14907,
+        5511,
+        1136,
+        3333
+      ],
+      "new_path": [
+        14907,
+        1299,
+        12859,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-20T23:00:41",
+      "prefix": "193.0.0.0/21",
+      "source_id": "21-37.49.236.55",
+      "previous_path": [
+        35600,
+        6774,
+        3333
+      ],
+      "new_path": [
+        35600,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-20T23:00:41",
+      "prefix": "193.0.0.0/21",
+      "source_id": "10-217.29.66.158",
+      "previous_path": [
+        24482,
+        6774,
+        3333
+      ],
+      "new_path": [
+        24482,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-20T23:00:41",
+      "prefix": "193.0.0.0/21",
+      "source_id": "20-91.206.52.205",
+      "previous_path": [
+        24482,
+        6774,
+        3333
+      ],
+      "new_path": [
+        24482,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-20T23:00:52",
+      "prefix": "193.0.0.0/21",
+      "source_id": "21-37.49.236.27",
+      "previous_path": [
+        2027,
+        6774,
+        3333
+      ],
+      "new_path": [
+        2027,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T01:19:19",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T01:42:18",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T01:42:36",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T04:40:13",
+      "prefix": "193.0.0.0/21",
+      "source_id": "21-37.49.237.175",
+      "previous_path": [
+        199524,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        199524,
+        1299,
+        12859,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T04:40:14",
+      "prefix": "193.0.0.0/21",
+      "source_id": "21-37.49.237.175",
+      "previous_path": [
+        199524,
+        1299,
+        12859,
+        3333
+      ],
+      "new_path": [
+        199524,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T04:56:41",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T04:57:19",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T06:12:18",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T06:12:28",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T06:13:56",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T06:14:03",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T06:29:29",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T06:29:39",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T06:45:53",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T06:46:03",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T07:25:27",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T07:25:37",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T08:01:13",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T08:01:23",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T08:01:44",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T08:01:53",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T09:11:02",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T09:11:17",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T09:33:50",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T09:33:59",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T11:22:49",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T11:23:06",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T13:04:24",
+      "prefix": "193.0.0.0/21",
+      "source_id": "21-37.49.237.175",
+      "previous_path": [
+        199524,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        199524,
+        1299,
+        12859,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T13:04:25",
+      "prefix": "193.0.0.0/21",
+      "source_id": "21-37.49.237.175",
+      "previous_path": [
+        199524,
+        1299,
+        12859,
+        3333
+      ],
+      "new_path": [
+        199524,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T13:55:56",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-152.89.170.250",
+      "previous_path": [
+        212271,
+        57142,
+        9002,
+        3333
+      ],
+      "new_path": [
+        212271,
+        9002,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T14:09:41",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T14:09:51",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T14:17:50",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T14:18:07",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T15:03:13",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T15:03:21",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T15:18:23",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T15:18:32",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T15:51:31",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T15:51:41",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "withdrawal_observed",
+      "timestamp": "2024-12-21T16:06:24",
+      "prefix": "193.0.0.0/21",
+      "source_id": "03-193.239.117.32",
+      "last_known_path": [
+        140984,
+        3333
+      ],
+      "previous_event_timestamp": "2024-12-21T15:32:14",
+      "previous_event_type": "A"
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T17:47:08",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T17:47:18",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T18:53:03",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T18:53:13",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T18:55:24",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T18:55:40",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T20:10:51",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T20:11:02",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T21:06:30",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T21:06:40",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T23:34:44",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-21T23:34:54",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T00:11:43",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T00:11:53",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T00:51:22",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T00:51:31",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T00:55:53",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T00:56:35",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T02:02:31",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T02:02:41",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T02:03:27",
+      "prefix": "193.0.0.0/21",
+      "source_id": "11-198.32.160.242",
+      "previous_path": [
+        24482,
+        2914,
+        1136,
+        3333
+      ],
+      "new_path": [
+        24482,
+        2603,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T03:44:48",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T03:44:58",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T07:41:33",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T07:41:41",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T07:49:46",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T07:50:33",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T09:21:50",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T09:22:00",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T09:34:03",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T09:34:14",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T09:53:58",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T09:54:13",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T10:04:32",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T10:04:43",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T10:43:23",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T10:43:34",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T11:38:56",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T11:39:07",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T13:10:41",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T13:10:52",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T13:11:16",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T13:11:27",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T13:59:02",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T13:59:11",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T14:52:52",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T14:53:02",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T17:08:44",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T17:08:54",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T18:34:54",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T18:35:39",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T18:50:57",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T18:51:08",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T19:04:25",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T19:04:36",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T20:31:24",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T20:31:34",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T20:49:26",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T20:49:35",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T20:52:48",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T20:52:58",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T22:13:40",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ]
+    },
+    {
+      "sequence_type": "announced_path_changed",
+      "timestamp": "2024-12-22T22:14:26",
+      "prefix": "193.0.0.0/21",
+      "source_id": "25-185.205.208.5",
+      "previous_path": [
+        44901,
+        20562,
+        1103,
+        3333
+      ],
+      "new_path": [
+        44901,
+        1103,
+        3333
+      ]
+    }
+  ],
+  "synthetic_data_used": false,
+  "limitations": [
+    "Only events returned by the queried API are represented.",
+    "A withdrawal has no path in the observed sample; last-known paths are reconstructed from earlier announcements in this dataset.",
+    "A later announcement does not prove the withdrawal was caused by an RPKI state change.",
+    "The analysis does not infer historical RPKI validation status."
+  ]
+}

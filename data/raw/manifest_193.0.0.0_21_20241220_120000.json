@@ -1,0 +1,30 @@
+{
+  "project": "RPKI-PathWatch",
+  "run_timestamp_utc": "2026-10-14T18:34:49.911450+00:00",
+  "prefix": "193.0.0.0/21",
+  "origin_as": 3333,
+  "sources": {
+    "bgp_state": {
+      "endpoint": "https://stat.ripe.net/data/bgp-state/data.json",
+      "query": {
+        "resource": "193.0.0.0/21",
+        "timestamp": "2024-12-20T12:00:00Z"
+      },
+      "observation_time": "2024-12-20T12:00:00Z",
+      "historical": true,
+      "file": "data\\raw\\bgp_193.0.0.0_21_20241220_120000.json"
+    },
+    "rpki_validation": {
+      "endpoint": "https://stat.ripe.net/data/rpki-validation/data.json",
+      "query": {
+        "resource": 3333,
+        "prefix": "193.0.0.0/21"
+      },
+      "observation_time": "query time; current lookup",
+      "historical": false,
+      "file": "data\\raw\\rpki_current_193.0.0.0_21_3333.json"
+    }
+  },
+  "warning": "The current RPKI validation result is not evidence of the validation state at the historical BGP timestamp. Do not correlate these as a historical transition.",
+  "synthetic_data_used": false
+}
