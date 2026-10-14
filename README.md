@@ -47,8 +47,8 @@ These are proposed implementation choices; capabilities will be described as imp
 | Team member | Area of responsibility |
 |---|---|
 | Akshat | System architecture, data processing, event correlation, routing metrics, dashboard integration, and reproducibility. |
-| [Teammate's name] | Cybersecurity research, RPKI/BGP security, RFC review, test-scenario design, validation of observations, and documentation. |
-| [Faculty mentor's name] | Research guidance, methodology review, technical feedback, and interpretation of findings. |
+| Krishn | Cybersecurity research, RPKI/BGP security, RFC review, test-scenario design, validation of observations, and documentation. |
+| Parthajit Borah | Research guidance, methodology review, technical feedback, and interpretation of findings. |
 
 Replace the placeholders with the correct names before final submission.
 
