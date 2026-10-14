@@ -171,11 +171,9 @@ These are planned capabilities and should not be interpreted as features already
 
 ## Team Introduction Video
 
-**Status:** Pending upload.
+**Status:** Uploaded.
 
-**YouTube link:** To be added after the team introduction video is published.
-
-Ensure the video is accessible to the hackathon evaluators and replace this placeholder with the final URL.
+**YouTube link:** [Proposed Solution](https://youtu.be/McxvNZqBUgg).
 
 ## References and Resources
 
